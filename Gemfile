@@ -7,6 +7,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'capybara'
+gem 'devise'
+gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 
 group :production do
