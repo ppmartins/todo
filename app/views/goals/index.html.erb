@@ -1,1 +1,7 @@
-<%= link_to 'New Monthly Planner', new_goal_path %>
+<%= link_to '--> Add a New Monthly Planner', new_goal_path %>
+<p>
+My Previous Goals:
+</p>
+<% @goals.each do |goal| %>
+  <p><%= link_to goal.month + ' ' + goal.year, goal_path(goal) %></p>
+<% end %>

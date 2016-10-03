@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :goal do
-    year "2016-10-03"
-    month "2016-10-03"
-    goal1 "MyText"
-    goal2 "MyText"
-    goal3 "MyText"
+    year "2016"
+    month "October"
+    goal1 "Goal 1"
+    goal2 "Goal 2"
+    goal3 "Goal 3"
   end
 end

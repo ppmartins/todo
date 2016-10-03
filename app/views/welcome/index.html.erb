@@ -18,7 +18,7 @@
 </li>
 
 <% if user_signed_in? %>
-  <h4>Have you define this month's goals? <%= link_to "To Do's", "#" %></h4>
+  <h4>Have you define this month's goals? <%= link_to "To Do's", goals_path %></h4>
 <% else %>
   <h4><%= link_to "Login", new_user_session_path %> / <%= link_to "Register", new_user_registration_path %> and start defining your goals.</h4>
 <% end %>
