@@ -17,8 +17,8 @@ feature "Create new To Do's" do
 
     expect(page).to have_content('2016')
     expect(page).to have_content('October')
-    expect(page).to have_content('Goal1')
-    expect(page).to have_content('Goal2')
-    expect(page).to have_content('Goal3')
+    expect(page).to have_content('Goal 1')
+    expect(page).to have_content('Goal 2')
+    expect(page).to have_content('Goal 3')
   end
 end
