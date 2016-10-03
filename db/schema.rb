@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003091047) do
+ActiveRecord::Schema.define(version: 20161003211458) do
 
   create_table "goals", force: :cascade do |t|
-    t.date     "year"
-    t.date     "month"
+    t.string   "year"
+    t.string   "month"
     t.text     "goal1"
     t.text     "goal2"
     t.text     "goal3"

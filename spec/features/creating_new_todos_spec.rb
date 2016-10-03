@@ -7,8 +7,8 @@ feature "Create new To Do's" do
   end
 
   scenario 'can create a new To Do' do
-    visit '/goals'
-    click_link 'New Monthly Planner'
+    visit '/goals/new'
+    save_and_open_page
     fill_in 'goal_year', with: 2016
     fill_in 'goal_month', with: 'October'
     fill_in 'goal_goal1', with: 'Goal 1'
