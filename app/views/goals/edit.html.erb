@@ -1,0 +1,18 @@
+<h2>Are you really sure you want to edit your planner?</h2>
+  <%= simple_form_for @goal do |f| %>
+  <%= f.error_notification %>
+  <div class="panel-body">
+    <%= f.input :year, priority: [ "2016" ], collection: [ "2016", "2017", "2018", "2019", "2020", "2021", "2022"], required: true, label: false %>
+    <%= f.input :month, priority: [ "October" ], collection: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], required: true, label: false %>
+    <%= f.input :goal1, required: true, label: false, placeholder: 'A must do for the month', input_html: { class: 'input-lg' } %>
+    <%= f.input :goal2, required: true, label: false, placeholder: 'A should do for the month', input_html: { class: 'input-lg' } %>
+    <%= f.input :goal3, required: true, label: false, placeholder: 'Something that would make you happy if you could do', input_html: { class: 'input-lg' } %>
+    <%= f.button :submit, "Save Goals", class: 'btn-lg btn-info btn-block' %>
+  </div>
+<% end %>
+
+<div class="text-center edit-links">
+  <%= link_to "Delete Goals", goal_path(@goal), method: :delete, data: { confirm: "Are you sure you want to delete this goal?" } %>
+  |
+  <%= link_to "Cancel", goals_path %>
+</div>

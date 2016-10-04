@@ -25,6 +25,25 @@ class GoalsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @goal.update(goal_params)
+      flash[:success] = 'Goals Updated.'
+      redirect_to goal_path(@goal)
+    else
+      flash[:alert] = 'Something went wrong. Please try again.'
+      render :edit
+    end
+  end
+
+  def destroy
+    @goal.destroy
+    flash[:success] = 'Your goal has been deleted.'
+    redirect_to goals_path
+  end
+
 
   private
 
@@ -38,7 +57,7 @@ class GoalsController < ApplicationController
 
   def owned_goal
     unless current_user == @goal.user
-      flash[:alert] = "That goal doesn't belong to you!"
+      flash[:alert] = "This goal doesn't belong to you"
       redirect_to root_path
     end
   end

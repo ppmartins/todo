@@ -3,3 +3,15 @@
 <%= @goal.goal1 %>
 <%= @goal.goal2 %>
 <%= @goal.goal3 %>
+
+<% if @goal.user.id == current_user.id %>
+  <div class="text-center edit-links">
+    <%= link_to "Cancel", goals_path %>
+    |
+    <%= link_to "Edit Goals", edit_goal_path(@goal) %>
+  </div>
+<% else %>
+  <div class="text-center edit-links">
+    <%= link_to "Cancel", goals_path %>
+  </div>
+<% end %>
